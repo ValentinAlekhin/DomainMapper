@@ -1,3 +1,0 @@
-copilot-telemetry.githubusercontent.com
-copilot-proxy.githubusercontent.com
-githubcopilot.com

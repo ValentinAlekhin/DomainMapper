@@ -2,6 +2,12 @@
 <details>
   <summary>Что нового (нажать, чтобы открыть)</summary>
 
+- Доабвлены некоторые [оналйн кинотеатры](https://github.com/Ground-Zerro/DomainMapper/blob/main/platforms/dns-onlinetheater.txt). Запрос @Andrey_schumacher
+- Добавлены списки от [ITDog](https://t.me/itdoginfo/36).
+- Добавлен сервис xBox. Запрос @Deni5c
+- Запуск в докере. Запрос [Запрос @andrejs82git](https://github.com/Ground-Zerro/DomainMapper/issues/21), [Реализация @MrEagle123](https://github.com/Ground-Zerro/DomainMapper/issues/21#issuecomment-2509565392)
+- Опция в config.ini: не добавлять comment="%SERVICE_NAME%" при сохранении IP-адресов в mikrotik формате. [Запрос @ITNetSystem](https://github.com/Ground-Zerro/DomainMapper/issues/45) 
+- Изменена кодиовка файла результатов на UTF-8 без BOM. [Запрос @Savanture](https://github.com/Ground-Zerro/DomainMapper/issues/54) 
 - [Конвертер маршутов](https://github.com/Ground-Zerro/DomainMapper/tree/main/utilities) как отдельная утилита. [Запрос @Andrey999r](https://github.com/Ground-Zerro/DomainMapper/discussions/43) 
 - Добавлен сервис Jetbrains. [Запрос @SocketSomeone](https://github.com/Ground-Zerro/DomainMapper/issues/40)
 - Добавлен сервис Discord. [Запрос @AHuMex](https://github.com/Ground-Zerro/DomainMapper/issues/38)
@@ -28,6 +34,8 @@
   <summary>Поддерживаемые сервисы (нажать, чтобы открыть)</summary>
 
 - [Antifilter - community edition](https://community.antifilter.download/)
+- [ITDog Inside](https://github.com/itdoginfo/allow-domains)
+- [ITDog Outside](https://github.com/itdoginfo/allow-domains)
 - Youtube
 - Facebook
 - Openai
@@ -39,12 +47,14 @@
 - Adobe
 - Apple
 - Google
-- Torrent Truckers
+- Torrent Trackers
 - Search engines
 - [Github сopilot](https://github.com/features/copilot)
 - Twitch
 - Discord
 - Jetbrains
+- Xbox
+- Telegram
 - Личный список
 
 </details>
@@ -61,7 +71,7 @@
 - Возможность выбора системного, публичного DNS-сервера или их комбинации.
 - При разрешении доменного имени используется каждый из указанных DNS-серверов, при этом процесс продолжается до получения всех возможных IP-адресов, а не останавливается на первом успешном ответе.
 - Автоматическое исключение дубликатов IP-адресов, а также "заглушек" (например, IP самих DNS-серверов, редиректов на `0.0.0.0` и `localhost`).
-- Поддержка работы в "тихом" режиме без взаимодействия с пользователем, настройка через конфигурационный файл.
+- Поддержка работы в "тихом" режиме без взаимодействия с пользователем - настройка через конфигурационный файл.
 - В конфигурационном файле можно указать команду для автоматического запуска другого скрипта или программы по завершении работы.
 
 
@@ -145,6 +155,15 @@ arena.openai.com
 
 
 <details>
+  <summary>Запуск в Docker (нажать, чтобы открыть)</summary>
+
+```
+curl -L -s "https://raw.githubusercontent.com/Ground-Zerro/DomainMapper/refs/heads/main/dm-docker.sh" > /tmp/dm-docker.sh && chmod +x /tmp/dm-docker.sh && sh /tmp/dm-docker.sh
+```
+</details>
+
+
+<details>
   <summary>Для пользователей Windows, не знающих "как", но кому "очень нужно" (нажать, чтобы открыть)</summary>
 
 - Загляните в директорию [Windows](https://github.com/Ground-Zerro/DomainMapper/tree/main/Windows) репозитория.
@@ -154,4 +173,4 @@ arena.openai.com
 ##### Протестировано в Ubuntu 20.04, macOS Sonoma и Windows 10/11
 
 ## ВАЖНО:
-Почему использование подготовленных кем-то IP-листов имеет мало смысла [ЖМИ](https://github.com/Ground-Zerro/DomainMapper/discussions/50)
+Использование сделанных "кем-то", а не Вами лично IP-листов и готовых файлов марштутов - **плохая идея** [ЖМИ](https://github.com/Ground-Zerro/DomainMapper/discussions/50)
